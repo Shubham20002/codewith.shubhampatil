@@ -36,6 +36,7 @@ Priority: ⭐⭐⭐ = must-know / asked very often · ⭐⭐ = commonly asked ·
 | 28  | ⭐⭐ | React 19              | [What are React 19 Features?](#what-are-react-19-features)       |
 | 29  | ⭐⭐ | Performance              | [What is Virtualization?](#what-is-virtualization)       |
 | 30  | ⭐⭐⭐ | Performance              | [What is Lazy Loading?](#what-is-lazy-loading)       |
+| 31  | ⭐⭐⭐ | State Management              | [What is Redux Toolkit and Explain its Architecture?](#what-is-redux-toolkit-and-explain-its-architecture)       |
 
 ### What is React?
 
@@ -436,5 +437,24 @@ Lazy loading is a performance optimization technique.
 - It improves initial load time.
 - It gives a better UX.
 - It uses the `Suspense` component.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+### What is Redux Toolkit and Explain its Architecture?
+
+In React, if we need to pass data from a component higher in the hierarchy to a deeply nested component, we need to pass it through multiple components. Passing data through multiple components like this creates prop drilling.
+
+With Redux Toolkit, we can create a central store, and any component can directly use that data without prop drilling.
+
+**Architecture**
+
+- **Store** — The single source of truth for the application's state.
+- **Slice** — A slice represents one feature; we create one slice per feature.
+- **Reducer** — A function used to update the state.
+- **Action** — A plain JS object which contains the event type and a payload.
+- **Dispatch** — Tells the store that an action has happened.
+- **Selector** — Used to read/consume data from the store inside a component.
+
+**Flow** — When a component dispatches an action, the reducer updates the state in the slice, and the store gets updated. Any component subscribed to that data via a selector re-renders with the new data.
 
 **[⬆ Back to Top](#table-of-contents)**
