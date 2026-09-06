@@ -1,4 +1,4 @@
-# Frontend Interview Questions & Answers
+# Javascript Interview Questions & Answers
 
 ## Table of Contents
 
